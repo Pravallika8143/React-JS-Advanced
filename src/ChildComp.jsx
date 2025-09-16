@@ -5,7 +5,7 @@ function ChildComp() {
 console.log("Child Component Rendered")
   return (
     <div className='border border-2 border-dark m-2 p-3'>
-      <h1>Child Comp</h1>
+      <h1>Child Component</h1>
     </div>
   )
 }
