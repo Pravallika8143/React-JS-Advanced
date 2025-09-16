@@ -28,16 +28,11 @@ function Counter() {
         setCountFn(count - 1)
     }
 
-    function res(){
-        setCountFn(0)
-    }
-
   return (
     <div className='border border-2 border-dark m-2 p-3'>
         <h1>Counter:{count}</h1>
         <button className='me-2' onClick={() => {inc()}}>Increament</button>
         <button className='me-2' onClick={() => {dec()}}>Decreament</button>
-        <button onClick={() => {res()}}>Reset</button>
     </div>
   )
 }
