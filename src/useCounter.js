@@ -17,6 +17,7 @@ export function useCounter(icount,step,name) {
     }
     useEffect(()=>{
           window.localStorage.setItem(name,count)
+          document.title = `${name} ${count}`
         },[count,name])
     function decCount() {
         setcount(count - step);
