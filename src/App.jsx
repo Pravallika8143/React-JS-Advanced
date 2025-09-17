@@ -1,26 +1,26 @@
-import React, { useCallback } from 'react'
-// import Counter from './Counter'
-import ChildComp from './ChildComp'
+import { useEffect, useRef } from 'react'
+import TodoList from './Todolist'
 
 function App() {
-    var [name,setName] = React.useState("");
-    var d = React.useMemo(() => {
-         return [33, 55]
-    },[]);
-    var f= React.useMemo(() => {
-        return {food:"biryani"}
-    },[]);
-    var greeting = useCallback(function(){
-      alert("Function Rendered")
-    },[]);
-      return (
-        <div className='border border-2 border-primary m-2 p-3'>
-            <div>
-              <h1>Name:{name}</h1>
-            </div>
-            <input type='text' onChange={(e)=>{setName(e.target.value)}}/>
-            <ChildComp a={3} b={"Pravallika"} c={d} e={f} g={greeting}></ChildComp>
-        </div>
+  // var aRef = useRef();
+  // var bRef = useRef();
+  // function handleClick(){
+  //   var x = aRef.current.value;
+  //   bRef.current.innerText = x;
+  // }
+  // useEffect(() => {
+  //   aRef.current.focus();
+  // },[])
+  return (
+    <div className='border border-2 border-black p-3 m-3'>
+      <h1>UseRef React Component</h1>
+      <TodoList></TodoList>
+      {/* <div>
+        <input type='text' className='me-3 mt-3' ref={aRef}/>
+        <button onClick={()=>{handleClick();}}>Show</button>
+        <h1 className='p-3'>Name:<span ref={bRef}></span></h1>
+      </div> */}
+    </div>
   )
 }
 
