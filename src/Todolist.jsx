@@ -9,7 +9,7 @@ const initialState = {
 const reducer = (state = initialState,action) => {
     switch(action.type){
         case "ADDTODO":
-            return {...state,todos:[...state.todos,{...state.newState}]};
+            return {...state,todos:[...state.todos,{...state.newState}]}
         case "UPDATENEWTODO":
             return {...state,newState:{...state.newState,title:action.payload}}
     }
